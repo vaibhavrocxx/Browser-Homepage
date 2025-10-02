@@ -318,7 +318,7 @@
         let userName, weatherLocation, clockFormat;
 
         function loadSettings() {
-          userName = localStorage.getItem("userName") || "Yashraj";
+          userName = localStorage.getItem("userName") || "Vaibhav";
           weatherLocation = localStorage.getItem("weatherLocation") || "Pune";
           clockFormat = localStorage.getItem("clockFormat") || "12h";
         }
@@ -327,7 +327,7 @@
           const newName = elements.nameInput.value.trim();
           const newLocation = elements.locationInput.value.trim();
 
-          userName = newName || "Yashraj";
+          userName = newName || "Vaibhav";
           weatherLocation = newLocation || "Pune";
           clockFormat = elements.clockFormatSelect.value;
 
