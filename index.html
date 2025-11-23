@@ -158,24 +158,51 @@
       @media (max-width: 768px) {
         /* Better mobile spacing */
         body {
-          overflow-y: auto;
+          overflow-y: auto !important;
         }
 
         main {
-          padding: 1.5rem !important;
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: flex-start !important;
           justify-content: flex-start !important;
-          padding-top: 3rem !important;
+          padding: 1rem !important;
+          padding-top: 15vh !important;
+          padding-bottom: 8rem !important;
+          min-height: 100vh !important;
+          height: auto !important;
+        }
+
+        /* Override desktop centering */
+        main > div {
+          margin-top: 0 !important;
+          transform: none !important;
         }
 
         /* Adjust font sizes for mobile */
         #greeting {
-          font-size: 1.75rem !important;
+          font-size: 2.25rem !important;
+          line-height: 1.2 !important;
         }
         #clock {
-          font-size: 2.5rem !important;
+          font-size: 3rem !important;
+          line-height: 1.2 !important;
         }
         #search-input {
           font-size: 1rem !important;
+          padding-top: 0.875rem !important;
+          padding-bottom: 0.875rem !important;
+        }
+
+        /* Adjust widget spacing */
+        .widget-item {
+          font-size: 0.95rem !important;
+        }
+
+        /* Bookmark sizing */
+        .bookmark-pill {
+          font-size: 0.8rem !important;
+          padding: 0.5rem 0.75rem !important;
         }
 
         /* Better button sizing for mobile */
@@ -219,16 +246,28 @@
 
       @media (max-width: 480px) {
         /* Extra small screens */
+        main {
+          padding-top: 12vh !important;
+        }
+
         #greeting {
-          font-size: 1.5rem !important;
+          font-size: 1.75rem !important;
         }
         #clock {
-          font-size: 2rem !important;
+          font-size: 2.5rem !important;
+        }
+
+        .widget-item {
+          font-size: 0.875rem !important;
+        }
+
+        .bookmark-pill {
+          font-size: 0.75rem !important;
         }
       }
     </style>
   </head>
-  <body class="bg-gray-900 text-white overflow-hidden">
+  <body class="bg-gray-900 text-white">
     <div id="background-image" class="background-image"></div>
     <div class="fixed inset-0 bg-black/50"></div>
 
@@ -252,7 +291,8 @@
 
     <!-- Main Content -->
     <main
-      class="relative z-10 flex flex-col justify-center h-screen p-4 sm:p-8 lg:p-12"
+      class="relative z-10 flex flex-col p-4 sm:p-8 lg:p-12"
+      style="min-height: 100vh"
     >
       <div
         class="w-full max-w-md flex flex-col items-start space-y-4 sm:space-y-6"
