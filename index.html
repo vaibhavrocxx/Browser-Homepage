@@ -183,16 +183,37 @@
           padding: 0.75rem !important;
         }
 
-        /* Stack footer on mobile */
+        /* Move top icons to bottom left on mobile */
+        .fixed.top-3 {
+          top: auto !important;
+          bottom: 1rem !important;
+          right: auto !important;
+          left: 1rem !important;
+        }
+
+        .fixed.top-3 button {
+          padding: 0.5rem !important;
+        }
+
+        .fixed.top-3 button i {
+          width: 1.25rem !important;
+          height: 1.25rem !important;
+        }
+
+        /* Stack footer on mobile and make smaller */
         footer {
           bottom: 1rem !important;
           right: 1rem !important;
+          font-size: 0.75rem !important;
         }
 
-        /* Top icons better positioned */
-        .fixed.top-4.right-4 {
-          top: 1rem !important;
-          right: 1rem !important;
+        footer svg {
+          width: 1rem !important;
+          height: 1rem !important;
+        }
+
+        footer span {
+          font-size: 0.75rem !important;
         }
       }
 
